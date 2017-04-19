@@ -1,6 +1,7 @@
 package com.lewis.daiosi.diaosicheng.fragment.homefragment;
 
 import android.content.Context;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -10,6 +11,8 @@ import com.lewis.daiosi.diaosicheng.utils.GlideImageLoader;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
+import com.zhy.adapter.recyclerview.CommonAdapter;
+import com.zhy.adapter.recyclerview.base.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,8 @@ public class MovieFragment extends BaseFragment {
     private Banner banner;
     private RecyclerView recyclerView;
     List<String> imgList;
+    List<String> movies;
+    private CommonAdapter<String> adapter;
 
     @Override
     public int bindLayout() {
@@ -33,13 +38,26 @@ public class MovieFragment extends BaseFragment {
         banner= (Banner) view.findViewById(R.id.banner);
         recyclerView= (RecyclerView) view.findViewById(R.id.recyclerView);
         imgList=new ArrayList<>();
+        movies=new ArrayList<>();
     }
 
     @Override
     public void doBusiness(Context mContext) {
         imgList.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic1xjab4j30ci08cjrv.jpg");
         imgList.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
+        for (int i = 0; i < 10; i++) {
+            movies.add("金刚狼"+i);
+        }
         initBanner(imgList);
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        adapter = new CommonAdapter<String>(getContext(), R.layout.item_fragment_movie, movies) {
+            @Override
+            protected void convert(ViewHolder holder, String o, int position) {
+                holder.setText(R.id.movie_name,o);
+            }
+        };
+        recyclerView.setAdapter(adapter);
+
     }
 
     @Override

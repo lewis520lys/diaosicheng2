@@ -10,6 +10,7 @@ import com.lewis.daiosi.diaosicheng.adapter.BaseFragmentPageAdapter;
 import com.lewis.daiosi.diaosicheng.base.BaseFragment;
 import com.lewis.daiosi.diaosicheng.fragment.homefragment.MovieFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,6 +36,8 @@ public class HomeFragment extends BaseFragment {
     }
 
     private void initData() {
+        fragments=new ArrayList<>();
+        titles=new ArrayList<>();
         fragments.add(new MovieFragment());
         fragments.add(new MovieFragment());
         fragments.add(new MovieFragment());

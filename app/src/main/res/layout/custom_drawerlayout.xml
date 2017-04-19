@@ -49,8 +49,19 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/lv_left_menu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:divider="@null"
             />
+        <RelativeLayout
+            android:padding="@dimen/d16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+         <com.lewis.daiosi.diaosicheng.view.MyGiftView
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentRight="true"
+             app:gif="@raw/meinv"
+             android:layout_width="100dp"
+             android:layout_height="100dp" />
+        </RelativeLayout>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

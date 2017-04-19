@@ -3,6 +3,7 @@ package com.lewis.daiosi.diaosicheng.fragment;
 import android.content.Context;
 import android.view.View;
 
+import com.lewis.daiosi.diaosicheng.R;
 import com.lewis.daiosi.diaosicheng.base.BaseFragment;
 
 /**
@@ -12,7 +13,7 @@ import com.lewis.daiosi.diaosicheng.base.BaseFragment;
 public class MemberFragment extends BaseFragment {
     @Override
     public int bindLayout() {
-        return 0;
+        return R.layout.fragment_member;
     }
 
     @Override
