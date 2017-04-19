@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/tab_iv"
+        android:layout_width="32dp"
+        android:layout_height="32dp" />
     <TextView
+        android:layout_marginLeft="@dimen/d20"
         android:gravity="center"
         android:text="首页"
         android:textSize="16sp"
         android:textColor="@color/black_color"
         android:id="@+id/tab"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp" />
 </LinearLayout>
