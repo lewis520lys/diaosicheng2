@@ -40,6 +40,7 @@ public class MainActivity extends BaseActivity {
     private FragmentManager fm;
     private FragmentTransaction transaction;
     private int selindex=0;
+    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
