@@ -9,6 +9,7 @@ import com.lewis.daiosi.diaosicheng.R;
 import com.lewis.daiosi.diaosicheng.adapter.BaseFragmentPageAdapter;
 import com.lewis.daiosi.diaosicheng.base.BaseFragment;
 import com.lewis.daiosi.diaosicheng.fragment.homefragment.MovieFragment;
+import com.lewis.daiosi.diaosicheng.fragment.homefragment.PictureFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class HomeFragment extends BaseFragment {
         fragments=new ArrayList<>();
         titles=new ArrayList<>();
         fragments.add(new MovieFragment());
-        fragments.add(new MovieFragment());
+        fragments.add(new PictureFragment());
         fragments.add(new MovieFragment());
         fragments.add(new MovieFragment());
         titles.add("视频");
