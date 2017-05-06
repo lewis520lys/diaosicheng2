@@ -1,19 +1,26 @@
-package com.lewis.daiosi.diaosicheng.fragment.homefragment;
+package com.lewis.daiosi.diaosicheng.activity;
+
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 
 import com.lewis.daiosi.diaosicheng.R;
-import com.lewis.daiosi.diaosicheng.base.BaseFragment;
+import com.lewis.daiosi.diaosicheng.base.BaseActivity;
 
 /**
- * Created by Administrator on 2017/4/19.
+ * Created by Administrator on 2017/5/6.
  */
 
-public class ArticleFragment extends BaseFragment {
+public class LoginRegActivity extends BaseActivity {
+    @Override
+    public void initParms(Bundle parms) {
+
+    }
+
     @Override
     public int bindLayout() {
-        return R.layout.article_fragment;
+        return R.layout.activity_login;
     }
 
     @Override

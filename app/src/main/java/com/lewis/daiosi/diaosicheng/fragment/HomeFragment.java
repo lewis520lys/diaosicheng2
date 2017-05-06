@@ -8,6 +8,7 @@ import com.androidkun.xtablayout.XTabLayout;
 import com.lewis.daiosi.diaosicheng.R;
 import com.lewis.daiosi.diaosicheng.adapter.BaseFragmentPageAdapter;
 import com.lewis.daiosi.diaosicheng.base.BaseFragment;
+import com.lewis.daiosi.diaosicheng.fragment.homefragment.ArticleFragment;
 import com.lewis.daiosi.diaosicheng.fragment.homefragment.MovieFragment;
 import com.lewis.daiosi.diaosicheng.fragment.homefragment.PictureFragment;
 
@@ -41,7 +42,7 @@ public class HomeFragment extends BaseFragment {
         titles=new ArrayList<>();
         fragments.add(new MovieFragment());
         fragments.add(new PictureFragment());
-        fragments.add(new MovieFragment());
+        fragments.add(new ArticleFragment());
         fragments.add(new MovieFragment());
         titles.add("视频");
         titles.add("美图");
